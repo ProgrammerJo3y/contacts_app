@@ -27,11 +27,9 @@ export default function App() {
 
   return (
     <div>
-      <h1>Contacts App - Beamafilm Internship Challenge</h1>
-      <h2>Joseph Kokkat</h2>
-      <label htmlFor="filter">Search Contacts</label>
-      <input type="text" id="filter" value={search} onChange={(e) => setSearch(e.target.value)} />
-      <button onClick={addContact}>Add New Contact</button>
+      <h1 style={{width: "800px", border: "solid", borderRadius: "20px", padding: "5px"}}>Contacts App - Beamafilm Internship Challenge</h1>
+      <input placeholder='Search Contacts...' style={{margin: "5px"}} type="text" id="filter" value={search} onChange={(e) => setSearch(e.target.value)} />
+      <button style={{margin: "5px"}} onClick={addContact}>Add New Contact</button>
       <ul>
         {filteredContacts.map(contact =>
           <li>{contact}</li>
